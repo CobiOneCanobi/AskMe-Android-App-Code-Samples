@@ -1,0 +1,85 @@
+<!--XML code that creates the front end of the page where the user's advice is displayed
+Google Play Store download link: bit.ly/1hTDeXX
+Screenshot of front page is visible on the Google Play Store page-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/borderline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title"
+        android:background="@drawable/textlines"
+        android:text="" />
+
+    <ProgressBar
+        android:id="@+id/noAdvice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/advice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/borderline1"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/borderline"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical"
+        android:text=""
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/borderline1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/heart"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textlines"
+        android:text="" />
+
+    <ImageButton
+        android:id="@+id/heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/advice"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_favorite_white_24dp"
+        android:onClick="goodAdvice"/>
+
+    <TextView
+        android:id="@+id/heartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Let us know if our advice helps you"
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/heart"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp" />
+</RelativeLayout>
